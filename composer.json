@@ -1,0 +1,22 @@
+{
+    "name": "inthraonsap/carabiner",
+    "description": "To use minify js and css files (Extra Feature: you can put the php code in Javascript file.)",
+    "keywords": ["laravel4", "jsmin", "cssmin", "carabiner"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "inthra.onsap",
+            "email": "inthra.onsap@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Inthraonsap\\Carabiner": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
