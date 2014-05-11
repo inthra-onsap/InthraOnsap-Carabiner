@@ -31,6 +31,13 @@ $ composer update
 $ php artisan config:publish inthraonsap/carabiner
 </pre>
 <h2>Usage</h2>
+<ul>
+  <li><a href="#configuration">Configuration</a></li>
+  <li><a href="#methods">Methods</a></li>
+</ul>
+<h3 id="configuration">
+Configuration
+</h3>
 <p>Configuration file of this package.</p>
 <pre>
 return array(
@@ -155,6 +162,9 @@ return array(
     'compiler' => 'php'
 );
 </pre>
+<h3 id="methods">
+Methods
+</h3>
 <p>For the functinalities of this package. I will update them next weekend. Becuase It is bed time for me.</p>
 <h2>Credits</h2>
 <p>All Credits to original developers. https://github.com/EllisLab/CodeIgniter/wiki/Carabiner and https://github.com/weboAp/laravel4-carabiner</p>
