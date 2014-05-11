@@ -157,4 +157,4 @@ return array(
 </pre>
 <p>For the functinalities of this package. I will update them next weekend. Becuase It is bed time for me.</p>
 <h2>Credits</h2>
-<p>All Credits to original developers. https://github.com/EllisLab/CodeIgniter/wiki/Carabiner</p>
+<p>All Credits to original developers. https://github.com/EllisLab/CodeIgniter/wiki/Carabiner and https://github.com/weboAp/laravel4-carabiner</p>
