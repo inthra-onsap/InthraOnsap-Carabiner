@@ -159,4 +159,4 @@ return array(
 <h2>Credits</h2>
 <p>All Credits to original developers. https://github.com/EllisLab/CodeIgniter/wiki/Carabiner and https://github.com/weboAp/laravel4-carabiner</p>
 <h2>Support or Contact</h2>
-<p>If you found any problems, Please give me a contact with inthra.onsap@gmail.com</p>
+<p>If you found any problems, Please give me a contact with <a href="mailto:inthra.onsap@gmail.com">inthra.onsap@gmail.com</a></p>
