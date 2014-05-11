@@ -26,10 +26,10 @@ $ composer update
   ...
 )
 </pre>
-<!--<p>Publish a config file by using artisan CLI.</p>
+<p>Publish a config file by using artisan CLI.</p>
 <pre>
 $ php artisan config:publish inthraonsap/carabiner
-</pre>-->
+</pre>
 <h2>Usage</h2>
 <p>Configuration file of this package.</p>
 <pre>
