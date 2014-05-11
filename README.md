@@ -147,7 +147,7 @@ return array(
      * Choose a compiler for javascript file.(It works once you use Carabiner::compileJs())
      * Options: php | blade
      * ex. php
-     *      alert("<?php echo 'print some text'; ?>");
+     *      alert("&lt;?php echo 'print some text'; ?&gt;");
      * ex. blade
      *      alert("{{{ print some text }}}");
      * Default: php
