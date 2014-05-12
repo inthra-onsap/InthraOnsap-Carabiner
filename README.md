@@ -165,7 +165,75 @@ return array(
 <h3 id="methods">
 Methods
 </h3>
-<p>For the functinalities of this package. I will update them next weekend. Becuase It is bed time for me.</p>
+<p>Working with assets</p>
+<pre>
+/** 
+* Add JS file to queue
+* @param	String of the path to development version of the JS file.  Could also be an array, or array of arrays. (ex. "assets/js/jquery.js")
+* @param	String of the path to production version of the JS file. NOT REQUIRED
+* @param	Boolean flag whether the file is to be combined. NOT REQUIRED
+* @param	String of the group name with which the asset is to be associated. NOT REQUIRED
+* @return   Void
+*/
+Carabiner::js($dev_file, $prod_file = '', $combine = TRUE, $minify = TRUE, $group = 'main');
+
+/**
+* Add CSS file to queue
+* @param	String of the path to development version of the CSS file. Could also be an array, or array of arrays. (ex. "assets/css/layout.css")
+* @param	String of the media type, usually one of (screen, print, handheld) for css. Defaults to screen.
+* @param	String of the path to production version of the CSS file. NOT REQUIRED
+* @param	Boolean flag whether the file is to be combined. NOT REQUIRED
+* @param	Boolean flag whether the file is to be minified. NOT REQUIRED
+* @param	String of the group name with which the asset is to be associated. NOT REQUIRED
+* @return   Void
+*/		
+Carabiner::css($dev_file, $media = 'screen', $prod_file = '', $combine = TRUE, $minify = TRUE, $group = 'main')
+
+/**
+* Adding js file to queue with blade or php compiler.
+* @param string $dev_file is String of the path to development version of the JS file.  Could also be an array, or array of arrays. (ex. "assets/js/jquery.js")
+* @param type $args is Array of variable that you want to send to js view. (ex. array("name"=>"Inthra Onsap")).
+* @param string $prod_file is String of the path to production version of the JS file. NOT REQUIRED
+* @param type $combine is Boolean flag whether the file is to be combined. NOT REQUIRED
+* @param type $minify is Boolean flag whether the file is to be minified. NOT REQUIRED
+* @param type $group is String of the group name with which the asset is to be associated. NOT REQUIRED
+* @return Void
+*/
+Carabiner::compileJs($dev_file, $args = array(), $prod_file = '', $combine = TRUE, $minify = TRUE, $group = 'main'){
+		
+// Display css
+Carabiner::display('css');
+
+//display js
+Carabiner::display('js');
+
+// display both
+Carabiner::display(); // OR Carabiner::display('both');
+
+// display group
+Carabiner::display('jquery'); // group name defined as jquery
+
+// display filterd group
+Carabiner::display('main', 'js'); // group name defined as main, only display JS
+
+// return string of asset references
+$string = Carabiner::display_string('main');
+
+// clear css cache
+Carabiner::empty_cache('css');
+
+//clear js cache
+Carabiner::empty_cache('js');
+
+// clear both
+Carabiner::empty_cache(); // OR Carabiner::empty_cache('both');
+
+// clear before a certain date
+Carabiner::empty_cache('both', 'now');	// String denoting a time before which cache 
+                                        // files will be removed.  Any string that 
+                                        // strtotime() can take is acceptable. 
+                                        // Defaults to 'now'.
+</pre>
 <h2>Credits</h2>
 <p>All Credits to original developers. https://github.com/EllisLab/CodeIgniter/wiki/Carabiner and https://github.com/weboAp/laravel4-carabiner</p>
 <h2>Support or Contact</h2>
