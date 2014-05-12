@@ -1,5 +1,5 @@
 <h2>Laravel4-Carabiner with Blade Compiler</h2>
-<p>Carabiner is a js/css minify package. I changed some code to get it work with Laravel4 and add a few functionalities.</p>
+<p>Carabiner is a js/css minify package. I changed some code to get it work with Laravel4 and add a few functionalities to make it compile php code. It's a good package when you work with two languages website or you need to send some php data to javascript file and so on.</p>
 <h2>Installation</h2>
 <p>Add "inthraonsap/carabiner": "dev-master" to composer.json file.</p>
 <pre>
