@@ -223,7 +223,9 @@ use Illuminate\View\Environment;
 use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\Routing\UrlGenerator as URL;
 use Illuminate\Filesystem\Filesystem as File;
-use Teepluss\Theme\Theme;
+use Inthraonsap\Carabiner\JSMin as JSMin;
+use Inthraonsap\Carabiner\Minify_CSS as Minify_CSS;
+use Inthraonsap\Carabiner\Curl as Curl;
 
 class Carabiner {   
     public $base_uri = '';
@@ -360,6 +362,16 @@ class Carabiner {
         return $str;
     }
     
+    /**
+    * Adding js file to queue with blade or php compiler.
+    * @param string $dev_file is String of the path to development version of the JS file.  Could also be an array, or array of arrays. (ex. "assets/js/jquery.js")
+    * @param type $args is Array of variable that you want to send to js view. (ex. array("name"=>"Inthra Onsap")).
+    * @param string $prod_file is String of the path to production version of the JS file. NOT REQUIRED
+    * @param type $combine is Boolean flag whether the file is to be combined. NOT REQUIRED
+    * @param type $minify is Boolean flag whether the file is to be minified. NOT REQUIRED
+    * @param type $group is String of the group name with which the asset is to be associated. NOT REQUIRED
+    * @return Void
+    */
     public function compileJs($dev_file, $args = array(), $prod_file = '', $combine = TRUE, $minify = TRUE, $group = 'main'){
 
         /**

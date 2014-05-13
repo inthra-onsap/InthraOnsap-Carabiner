@@ -112,7 +112,7 @@ return array(
     'charset' => 'UTF-8',
     
     /**
-     * Choose the compiler for js file.
+     * Choose a compiler for javascript file.(It works once you use Carabiner::compileJs())
      * Options: php | blade
      * ex. php
      *      alert("<?php echo 'print some text'; ?>");
